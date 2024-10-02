@@ -7,7 +7,7 @@ public abstract class Veiculo {
     public Veiculo(String marca, String modelo, int ano, String placa) {
         this.marca = marca;
         this.modelo = modelo;
-        this.ano = ano;
+        setAno(ano);
         this.placa = placa;
     }
 
@@ -36,10 +36,11 @@ public abstract class Veiculo {
     }
 
     public void setAno(int ano) {
-        if (ano > 0) {
+        String anoString = String.valueOf(ano);
+        if (anoString.length() == 4) { 
             this.ano = ano;
         } else {
-            System.out.println("Ano inválido. Deve ser maior que 0.");
+            throw new IllegalArgumentException("Ano inválido. Deve ter 4 dígitos.");
         }
     }
 

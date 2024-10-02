@@ -6,6 +6,10 @@ public class Moto extends Veiculo {
         this.partidaEletrica = partidaEletrica;
     }
 
+    public boolean hasPartidaEletrica() {
+        return partidaEletrica;
+    }
+
     @Override
     public String detalhesEspecificos() {
         return "Part. Elétrica: " + (partidaEletrica ? "Sim" : "Não");
