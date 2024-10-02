@@ -3,7 +3,19 @@ public class Carro extends Veiculo {
 
     public Carro(String marca, String modelo, int ano, String placa, int numeroPortas) {
         super(marca, modelo, ano, placa);
-        this.numeroPortas = numeroPortas;
+        setNumeroPortas(numeroPortas);
+    }
+
+    public int getNumeroPortas() {
+        return numeroPortas;
+    }
+
+    public void setNumeroPortas(int numeroPortas) {
+        if (numeroPortas > 0 && numeroPortas <= 4) {
+            this.numeroPortas = numeroPortas;
+        } else {
+            throw new IllegalArgumentException("Número de portas inválido. Deve estar entre 1 e 4.");
+        }
     }
 
     @Override

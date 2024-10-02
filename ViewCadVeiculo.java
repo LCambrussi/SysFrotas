@@ -20,7 +20,7 @@ public class ViewCadVeiculo {
             System.out.println("3 - Pesquisar um Veículo por placa");
             System.out.println("4 - Remover um Veículo");
             System.out.println("0 - Sair");
-            System.out.print("Digite a opção desejada:\n ");
+            System.out.print("Digite a opção desejada: ");
             opcao = lerInteiro();
 
             limparTela();
